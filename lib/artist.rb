@@ -10,16 +10,21 @@ class Artist
     @@all << self
   end
   
-  def song
-    Song.all.select {|song| song.artist == self}
+  def new_song(name, genre)
+    song = Song.new(name, self, genre)
+    self.songs.last
   end
-  
+
   def songs
-    @song
+    Song.all.select do |song|
+      song.artist == self
+    end
   end
-  
-  def genre
-    songs.map {|song| song.genre}
+
+  def genres
+    Song.all.map do |song|
+      song.genre
+    end
   end
   
   def self.all
