@@ -15,7 +15,7 @@ class Artist
   end
   
   def songs
-    @songs
+    @song
   end
   
   def genre
