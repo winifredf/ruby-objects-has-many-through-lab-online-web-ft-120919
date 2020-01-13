@@ -19,7 +19,7 @@ class Patient
   end
   
   def doctors
-    appointments.include? {|appointment| appointment.doctor}
+    appointments.collect {|appointment| appointment.doctor}
   end
 
   def new_appointment(doctor, date)
