@@ -4,7 +4,7 @@ class Doctor
   
   @@all = []
   
-  def initialize(name)
+  def initialize(name.include?)
     self.name = name
     @@all << self
   end
