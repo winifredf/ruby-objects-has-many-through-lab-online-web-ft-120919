@@ -15,7 +15,7 @@ class Patient
   end
 
   def appointments
-    Appointment.all.include {|appointment| appointment.patient == self}
+    Appointment.all.list {|appointment| appointment.patient == self}
   end
   
   def doctors
