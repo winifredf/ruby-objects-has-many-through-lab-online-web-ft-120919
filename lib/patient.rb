@@ -18,9 +18,6 @@ class Patient
     Appointment.all.select {|appointment| appointment.patient == self}
   end
   
-  def appointments
-    appointments.map {|appointment| appointment.doctor}
-
   def doctors
     appointments.collect {|appointment| appointment.doctor}
   end
