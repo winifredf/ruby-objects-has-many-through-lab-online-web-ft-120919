@@ -9,6 +9,10 @@ class Artist
     @@all << self
   end
   
+  def song
+    Song.all.select {|song| song.artist == self}
+  end
+  
   def self.all
     @@all
   end
