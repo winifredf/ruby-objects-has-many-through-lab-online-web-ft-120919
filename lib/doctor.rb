@@ -6,7 +6,7 @@ class Doctor
   
   def initialize(name)
     @name = name
-    self.all = []
+    @@all << self
   end
   
   def self.all
