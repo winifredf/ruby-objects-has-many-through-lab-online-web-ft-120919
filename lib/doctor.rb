@@ -6,7 +6,7 @@ class Doctor
   
   def initialize(name)
     self.name = name
-    @@all << self
+    @@all << self.include?
   end
   
   def appointments
