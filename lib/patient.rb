@@ -19,7 +19,7 @@ class Patient
   end
   
   def appointments
-    appointments.map {|appointment| appointment.patient}
+    appointments.map {|appointment| appointment.doctor}
 
   def doctors
     appointments.collect {|appointment| appointment.doctor}
