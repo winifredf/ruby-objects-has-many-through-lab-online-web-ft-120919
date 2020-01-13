@@ -18,7 +18,7 @@ class Doctor
   end
   
   def self.all
-    @all
+    @all_doc
   end
   
   def new_appointment(patient, date)
